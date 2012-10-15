@@ -1,0 +1,30 @@
+<style>
+
+.left {
+	float: left;
+}
+
+img {
+	height: 50px;
+	width: 50px;
+}
+
+</style>
+
+<h1>Starter League Rails for Designers Dev Students</h1>
+
+<ul>
+
+	<% @students.each do |student| %>
+		
+		<h3>
+			<%=  student["student"]["name"] %>
+		</h3>
+			<li class="left">
+				<img src='http://codemountain.com<%= student["student"]["avatar_url"] %>' />			
+			</li>
+
+			
+
+	<% end %>
+</ul>
