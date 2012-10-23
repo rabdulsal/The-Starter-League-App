@@ -1,0 +1,11 @@
+<p>
+	This will print <b><%= @word %></b>, <i><%= @number %></i> times:
+</p>
+
+<p>
+	<% @number.times do %>
+	<p>
+		<%= @word %>
+	</p>
+	<% end %>
+</p>

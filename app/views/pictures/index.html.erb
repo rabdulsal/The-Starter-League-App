@@ -1,1 +1,52 @@
-<h1>Hello World</h1>
+<html>
+
+<style>
+
+body {
+	padding: 10px;
+	background: #eee;
+}
+fieldset {
+	width: 320px;
+	margin: 10px;
+	border-radius: 5px;
+}
+.container {
+	width: 980px;
+	margin: 0 auto;
+	border: 1px solid #000;
+	border-radius: 5px;
+	background: #fff;
+	padding: 10px;
+}
+img {
+	max-width: 300px;
+	max-height: 300px
+}
+input {
+	width: 300px;
+}
+</style>
+<body>
+	<div class="container">
+		<h1>Your Photo Index</h1>
+		<h2>Add a New Photo Url</h2>
+		<fieldset>
+			<legend>Video Url</legend>
+			<form action="pictures" method="get">
+
+				<input type="text" name="url">
+
+			</form>
+		</fieldset>
+		<ul>
+			<h2>Your Pics</h2>
+			<% @pictures.reverse.each do |image| %>
+				<li>
+					<img src="<%= image.url %>" />
+				</li>
+			<% end %>
+		</ul>		
+	</div>
+</body>
+</html>

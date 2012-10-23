@@ -1,10 +1,15 @@
 Myapp::Application.routes.draw do
 
-  get("pictures", :controller => 'Pictures', :action => 'index' )
+  get("pictures/:image/:width/:height", :controller => 'Pictures', :action => 'home' )
+  get "pictures", :controller => 'Pictures', :action => 'index'
   get "am", :controller => 'Sections', :action => 'am_section'
   get "pm", :controller => 'Sections', :action => 'pm_section'
   get "rfd", :controller => 'Sections', :action => 'rfd_section'
   get "tsl2012", :controller => 'Sections', :action => 'tsl_class'
+
+  #Key concept with the below controller is that custom Pages;
+  #whether the user is logged-in or not, for instance
+  get "/pictures/:word/:number", :controller => 'Pictures', :action => 'brady'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
