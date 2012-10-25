@@ -1,10 +1,14 @@
 class PicturesController < ApplicationController
 	
+	def index
+		@pictures = Picture.all
+	end
+
 	def new     
 
 	end
 
-	def array
+	def edit
 
 	#	@pic_array = [
 	#	"http://upload.wikimedia.org/wikipedia/commons/f/f1/Ruby_logo.png",
@@ -15,11 +19,7 @@ class PicturesController < ApplicationController
  	#   "http://upload.wikimedia.org/wikipedia/en/1/1c/CoffeeScript-logo.png",
  	#   "http://upload.wikimedia.org/wikipedia/commons/3/3b/Haml_1-5_logo.png"
     #]    
-	    @pictures = Picture.all
-	end
-
-	def index
-		@pictures = Picture.all
+	    @pictures = Picture.find_by_id(params[:id])
 	end
 
 	def create
@@ -29,6 +29,14 @@ class PicturesController < ApplicationController
 		p.save
 		redirect_to "/pictures"
 	end
+
+	def update
+		p = Picture.find_by_id(params[:id])
+		p.url = params[:url]
+		p.save
+
+		redirect_to "/pictures/#{p.id}"
+	end	
 
 	def destroy
 		p = Picture.find_by_id(params[:id])

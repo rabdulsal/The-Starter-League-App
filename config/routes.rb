@@ -5,6 +5,9 @@ Myapp::Application.routes.draw do
   get "pictures/:id", :controller => 'Pictures', :action => 'show'
   get "new", :controller => 'Pictures', :action => 'new'  
   delete "pictures/:id", :controller => 'Pictures', :action => 'destroy'
+  get "pictures/:id/edit", :controller => 'Pictures', :action => 'edit'
+  put "pictures/:id", :controller => 'Pictures', :action => 'update'
+
   # ------------------ SECTIONS ----------------------
 
   get "am", :controller => 'Sections', :action => 'am_section'

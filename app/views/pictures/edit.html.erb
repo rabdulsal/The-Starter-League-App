@@ -1,0 +1,11 @@
+<h1>Edit Picture #<%= @pictures.id %>.</h1>
+
+<%= form_tag "/pictures/#{@pictures.id}", "method" => "put" do %>
+	<%= label_tag "url", "Image URL:" %><%= text_field_tag "url", @pictures.url %>
+	<%= submit_tag "Save Picture" %>
+
+	<p>
+		<%= link_to "Back", "/pictures" %>
+	</p>
+<% end %>
+

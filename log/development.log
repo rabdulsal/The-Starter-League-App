@@ -17952,3 +17952,672 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 21:06:16 -0500
 Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2012-10-24 22:23:51 -0500
+Processing by PicturesController#new as HTML
+  Rendered pictures/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 22:23:51 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 22:23:51 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 22:23:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 22:23:51 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2012-10-24 23:12:54 -0500
+Processing by PicturesController#index as HTML
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT "pictures".* FROM "pictures" [0m
+  Rendered pictures/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 39ms (Views: 15.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:12:54 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:12:54 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:12:55 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:12:55 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures/27/edit" for 127.0.0.1 at 2012-10-24 23:13:00 -0500
+
+ActionController::RoutingError (No route matches [GET] "/pictures/27/edit"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/pictures/27/edit" for 127.0.0.1 at 2012-10-24 23:17:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/pictures/27/edit"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/pictures/27/edit" for 127.0.0.1 at 2012-10-24 23:21:40 -0500
+Processing by PicturesController#update as HTML
+  Parameters: {"id"=>"27"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PicturesController::Pictures):
+  app/controllers/pictures_controller.rb:34:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.4ms)
+
+
+Started GET "/pictures/27/edit" for 127.0.0.1 at 2012-10-24 23:22:38 -0500
+Processing by PicturesController#update as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 27 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  UPDATE "pictures" SET "url" = NULL, "updated_at" = '2012-10-25 04:22:38.492563' WHERE "pictures"."id" = 27
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pictures/27
+Completed 302 Found in 34ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/pictures/27" for 127.0.0.1 at 2012-10-24 23:22:38 -0500
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 27 LIMIT 1
+  Rendered pictures/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:22:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:22:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:22:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:22:38 -0500
+Served asset /application.js - 304 Not Modified (96ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2012-10-24 23:27:16 -0500
+Processing by PicturesController#index as HTML
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" [0m
+  Rendered pictures/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 12.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:27:16 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/pictures/27/edit" for 127.0.0.1 at 2012-10-24 23:27:25 -0500
+Processing by PicturesController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 27 LIMIT 1
+  Rendered pictures/edit.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    1: <h1>Edit Picture #<%= @picture.id %>.</h1>
+    2: 
+    3: <%= form_tag "/pictures/#{@picture.id}", "method" => "put" do %>
+    4: 	<%= label_tag "url", "Image URL:" %><%= text_field_tag "url", @picture.url %>
+  app/views/pictures/edit.html.erb:1:in `_app_views_pictures_edit_html_erb___1754383811659838996_2153455840'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.3ms)
+
+
+Started DELETE "/pictures/27" for 127.0.0.1 at 2012-10-24 23:27:51 -0500
+Processing by PicturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XTl4sjOXJ43FtsUuQzoZ/OlKqXvXKqMTC6qiIXzaio8=", "id"=>"27"}
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 27 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "pictures" WHERE "pictures"."id" = ?[0m  [["id", 27]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2012-10-24 23:27:51 -0500
+Processing by PicturesController#index as HTML
+  [1m[36mPicture Load (0.6ms)[0m  [1mSELECT "pictures".* FROM "pictures" [0m
+  Rendered pictures/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:27:51 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:27:51 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:27:51 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:27:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2012-10-24 23:28:04 -0500
+Processing by PicturesController#new as HTML
+  Rendered pictures/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:04 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:04 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:28:04 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:04 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2012-10-24 23:28:25 -0500
+Processing by PicturesController#create as HTML
+  Parameters: {"url"=>"http://pandodaily.files.wordpress.com/2012/10/obamacat.gif?w=600&h=369"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "pictures" ("created_at", "favorite", "not", "updated_at", "url") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 25 Oct 2012 04:28:25 UTC +00:00], ["favorite", nil], ["not", nil], ["updated_at", Thu, 25 Oct 2012 04:28:25 UTC +00:00], ["url", "http://pandodaily.files.wordpress.com/2012/10/obamacat.gif?w=600&h=369"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2012-10-24 23:28:25 -0500
+Processing by PicturesController#index as HTML
+  [1m[36mPicture Load (0.4ms)[0m  [1mSELECT "pictures".* FROM "pictures" [0m
+  Rendered pictures/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:28:25 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:25 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:25 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:25 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures/29" for 127.0.0.1 at 2012-10-24 23:28:33 -0500
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 29 LIMIT 1
+  Rendered pictures/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:28:33 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:33 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2012-10-24 23:28:38 -0500
+Processing by PicturesController#index as HTML
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" [0m
+  Rendered pictures/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:28:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:28:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures/29/edit" for 127.0.0.1 at 2012-10-24 23:28:40 -0500
+Processing by PicturesController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 29 LIMIT 1
+  Rendered pictures/edit.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    1: <h1>Edit Picture #<%= @picture.id %>.</h1>
+    2: 
+    3: <%= form_tag "/pictures/#{@picture.id}", "method" => "put" do %>
+    4: 	<%= label_tag "url", "Image URL:" %><%= text_field_tag "url", @picture.url %>
+  app/views/pictures/edit.html.erb:1:in `_app_views_pictures_edit_html_erb___1754383811659838996_2153455840'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.4ms)
+
+
+Started GET "/pictures/29/edit" for 127.0.0.1 at 2012-10-24 23:30:28 -0500
+Processing by PicturesController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 29 LIMIT 1[0m
+  Rendered pictures/edit.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    1: <h1>Edit Picture #<%= @pictures.id %>.</h1>
+    2: 
+    3: <%= form_tag "/pictures/#{@picture.id}", "method" => "put" do %>
+    4: 	<%= label_tag "url", "Image URL:" %><%= text_field_tag "url", @picture.url %>
+    5: 	<%= submit_tag "Save Picture" %>
+    6: <% end %>
+  app/views/pictures/edit.html.erb:3:in `_app_views_pictures_edit_html_erb___1754383811659838996_2154855800'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.7ms)
+
+
+Started GET "/pictures/29/edit" for 127.0.0.1 at 2012-10-24 23:30:43 -0500
+Processing by PicturesController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 29 LIMIT 1
+  Rendered pictures/edit.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `url' for nil:NilClass):
+    1: <h1>Edit Picture #<%= @pictures.id %>.</h1>
+    2: 
+    3: <%= form_tag "/pictures/#{@pictures.id}", "method" => "put" do %>
+    4: 	<%= label_tag "url", "Image URL:" %><%= text_field_tag "url", @picture.url %>
+    5: 	<%= submit_tag "Save Picture" %>
+    6: <% end %>
+  app/views/pictures/edit.html.erb:4:in `block in _app_views_pictures_edit_html_erb___1754383811659838996_2153339640'
+  app/views/pictures/edit.html.erb:3:in `_app_views_pictures_edit_html_erb___1754383811659838996_2153339640'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.5ms)
+
+
+Started GET "/pictures/29/edit" for 127.0.0.1 at 2012-10-24 23:32:06 -0500
+Processing by PicturesController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 29 LIMIT 1[0m
+  Rendered pictures/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:32:06 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:32:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:32:06 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:32:06 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/pictures/29" for 127.0.0.1 at 2012-10-24 23:33:41 -0500
+Processing by PicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KvH0WbShrHaJX4UDuEInWjZXsngxCpWusraLXGdsB10=", "url"=>"http://cdn3.sbnation.com/entry_photo_images/7104601/2012-10-23imac-6_large_large.jpg", "commit"=>"Save Picture", "id"=>"29"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 29 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "pictures" SET "url" = 'http://cdn3.sbnation.com/entry_photo_images/7104601/2012-10-23imac-6_large_large.jpg', "updated_at" = '2012-10-25 04:33:41.346104' WHERE "pictures"."id" = 29
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pictures/29
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/pictures/29" for 127.0.0.1 at 2012-10-24 23:33:41 -0500
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 29 LIMIT 1
+  Rendered pictures/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:33:41 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:33:41 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:33:41 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:33:41 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/pictures/29" for 127.0.0.1 at 2012-10-24 23:36:16 -0500
+Processing by PicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KvH0WbShrHaJX4UDuEInWjZXsngxCpWusraLXGdsB10=", "url"=>"http://cdn3.sbnation.com/entry_photo_images/7104601/2012-10-23imac-6_large_large.jpg", "commit"=>"Save Picture", "id"=>"29"}
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 29 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pictures/29
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/pictures/29" for 127.0.0.1 at 2012-10-24 23:36:16 -0500
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 29 LIMIT 1
+  Rendered pictures/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:36:16 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:36:16 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:36:16 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:36:16 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2012-10-24 23:36:18 -0500
+Processing by PicturesController#index as HTML
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" [0m
+  Rendered pictures/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:36:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:36:18 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:36:18 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:36:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures/24/edit" for 127.0.0.1 at 2012-10-24 23:36:27 -0500
+Processing by PicturesController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 24 LIMIT 1
+  Rendered pictures/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:36:27 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:36:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:36:27 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:36:27 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures/23/edit" for 127.0.0.1 at 2012-10-24 23:38:07 -0500
+Processing by PicturesController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 23 LIMIT 1[0m
+  Rendered pictures/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:07 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:07 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:07 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:38:07 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2012-10-24 23:38:09 -0500
+Processing by PicturesController#index as HTML
+  [1m[35mPicture Load (0.4ms)[0m  SELECT "pictures".* FROM "pictures" 
+  Rendered pictures/index.html.erb within layouts/application (72.3ms)
+Completed 200 OK in 85ms (Views: 81.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:38:09 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:09 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:09 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures/19" for 127.0.0.1 at 2012-10-24 23:38:20 -0500
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPicture Load (0.3ms)[0m  [1mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = 19 LIMIT 1[0m
+  Rendered pictures/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:38:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:20 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:20 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2012-10-24 23:38:28 -0500
+Processing by PicturesController#index as HTML
+  [1m[35mPicture Load (0.3ms)[0m  SELECT "pictures".* FROM "pictures" 
+  Rendered pictures/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:38:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:38:28 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2012-10-24 23:40:56 -0500
+Processing by PicturesController#new as HTML
+  Rendered pictures/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:40:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:40:56 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:40:56 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:40:56 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2012-10-24 23:41:16 -0500
+Processing by PicturesController#create as HTML
+  Parameters: {"url"=>"http://pandodaily.files.wordpress.com/2012/10/obamacat.gif?w=600&h=369"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "pictures" ("created_at", "favorite", "not", "updated_at", "url") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 25 Oct 2012 04:41:16 UTC +00:00], ["favorite", nil], ["not", nil], ["updated_at", Thu, 25 Oct 2012 04:41:16 UTC +00:00], ["url", "http://pandodaily.files.wordpress.com/2012/10/obamacat.gif?w=600&h=369"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2012-10-24 23:41:16 -0500
+Processing by PicturesController#index as HTML
+  [1m[35mPicture Load (0.4ms)[0m  SELECT "pictures".* FROM "pictures" 
+  Rendered pictures/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-24 23:41:16 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-24 23:41:16 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 23:41:16 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-24 23:41:16 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)

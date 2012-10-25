@@ -45,7 +45,8 @@ li {
 					<img src="<%= image.url %>" />
 					<p>
 						<%= link_to "View", "/pictures/#{image.id}" %>
-						<%= link_to "Delete", "/pictures/#{image.id}", :method => :delete %>
+						<%= link_to "Edit", "/pictures/#{image.id}/edit" %>
+						<%= link_to "Delete", "/pictures/#{image.id}", :method => :delete, :confirm => "Are you sure you want to Delete this Image?" %>
 					</p>
 				</li>
 			<% end %>
