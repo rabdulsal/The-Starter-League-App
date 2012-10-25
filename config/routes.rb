@@ -1,7 +1,12 @@
 Myapp::Application.routes.draw do
 
-  get("pictures/:image/:width/:height", :controller => 'Pictures', :action => 'home' )
-  get "pictures", :controller => 'Pictures', :action => 'index'
+  get "pictures", :controller => 'Pictures', :action => 'index'  
+  post "pictures", :controller => 'Pictures', :action => 'create'
+  get "pictures/:id", :controller => 'Pictures', :action => 'show'
+  get "new", :controller => 'Pictures', :action => 'new'  
+  delete "pictures/:id", :controller => 'Pictures', :action => 'destroy'
+  # ------------------ SECTIONS ----------------------
+
   get "am", :controller => 'Sections', :action => 'am_section'
   get "pm", :controller => 'Sections', :action => 'pm_section'
   get "rfd", :controller => 'Sections', :action => 'rfd_section'
@@ -9,8 +14,6 @@ Myapp::Application.routes.draw do
 
   #Key concept with the below controller is that custom Pages;
   #whether the user is logged-in or not, for instance
-  get "/pictures/:word/:number", :controller => 'Pictures', :action => 'brady'
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

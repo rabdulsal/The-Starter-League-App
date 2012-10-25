@@ -1,0 +1,19 @@
+<html>
+
+<style>
+
+img {
+	padding: 10px;
+	border: 1px solid #aaa;
+	box-shadow: 1px 1px 5px #000;
+}
+</style>
+
+<h1>Here is the picture you requested</h1>
+
+<img src="<%= @pic_id.url %>" />
+<p>
+<%= link_to "Home", "/pictures" %>
+</p>
+
+</html>

@@ -21,29 +21,32 @@ fieldset {
 }
 img {
 	max-width: 300px;
-	max-height: 300px
+	max-height: 300px;
+	padding: 10px;
+	border: 1px solid #aaa;
+	box-shadow: 1px 1px 5px #000;
 }
 input {
 	width: 300px;
+}
+li {
+	list-style: none;
 }
 </style>
 <body>
 	<div class="container">
 		<h1>Your Photo Index</h1>
-		<h2>Add a New Photo Url</h2>
-		<fieldset>
-			<legend>Video Url</legend>
-			<form action="pictures" method="get">
-
-				<input type="text" name="url">
-
-			</form>
-		</fieldset>
+		
+		<p><%= link_to "Add New Pic", "/new" %></p>
 		<ul>
 			<h2>Your Pics</h2>
 			<% @pictures.reverse.each do |image| %>
 				<li>
 					<img src="<%= image.url %>" />
+					<p>
+						<%= link_to "View", "/pictures/#{image.id}" %>
+						<%= link_to "Delete", "/pictures/#{image.id}", :method => :delete %>
+					</p>
 				</li>
 			<% end %>
 		</ul>		
