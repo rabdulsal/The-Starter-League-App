@@ -1,19 +1,25 @@
 Myapp::Application.routes.draw do
 
-  get "pictures", :controller => 'Pictures', :action => 'index'  
-  post "pictures", :controller => 'Pictures', :action => 'create'
-  get "pictures/:id", :controller => 'Pictures', :action => 'show'
-  get "new", :controller => 'Pictures', :action => 'new'  
-  delete "pictures/:id", :controller => 'Pictures', :action => 'destroy'
-  get "pictures/:id/edit", :controller => 'Pictures', :action => 'edit'
-  put "pictures/:id", :controller => 'Pictures', :action => 'update'
+  resources :votes
 
-  # ------------------ SECTIONS ----------------------
+  get "/pictures", :controller => 'Pictures', :action => 'index'  
+  post "/pictures", :controller => 'Pictures', :action => 'create'
+  get "/pictures/new", :controller => 'Pictures', :action => 'new'  
+  get "/pictures/:id", :controller => 'Pictures', :action => 'show'
+  delete "/pictures/:id", :controller => 'Pictures', :action => 'destroy'
+  get "/pictures/:id/edit", :controller => 'Pictures', :action => 'edit', :as => 'picture'
+  put "/pictures/:id/edit", :controller => 'Pictures', :action => 'update'
+  post "/pictures/:id/comments" => 'Pictures#comment_create'
+  
+  # ------------------ COMMENTS ----------------------
 
-  get "am", :controller => 'Sections', :action => 'am_section'
-  get "pm", :controller => 'Sections', :action => 'pm_section'
-  get "rfd", :controller => 'Sections', :action => 'rfd_section'
-  get "tsl2012", :controller => 'Sections', :action => 'tsl_class'
+  get "/comments" => 'Pictures#comment_index'
+  delete "/comments/:id" => 'Pictures#comment_destroy'
+  post "/comments" => 'Pictures#comment_create'
+  get "/comments/new" => 'Comments#new'
+  get "/comments/:id" => 'Pictures#comment_show'
+  
+  
 
   #Key concept with the below controller is that custom Pages;
   #whether the user is logged-in or not, for instance

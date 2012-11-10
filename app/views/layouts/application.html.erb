@@ -6,9 +6,16 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
+<ul class="nav-bar">
+	<li><%= link_to "Home", "/pictures" %></li>
+	<li><%= link_to "Comments", "/comments" %></li>
+	<li><%= link_to "Add Pic", "/pictures/new" %></li>
+</ul>
+
 <body>
-
-<%= yield %>
-
+	<div class="container">
+		<%= yield %>
+	</div>
 </body>
 </html>

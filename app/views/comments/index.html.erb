@@ -1,0 +1,8 @@
+<h1>These are the latest Comments</h1>
+<ul>
+	<% @comments.each do |note| %>
+		<li>
+			<%= note.comment %> | <%= note.picture_id %> | <%= note.picture %>
+		</li>
+	<% end %>
+</ul>

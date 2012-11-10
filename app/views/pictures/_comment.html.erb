@@ -1,0 +1,5 @@
+<%= form_tag "/comments", :method => "post" do %>
+	<%= label_tag "comment", "Your Comment" %><br />
+	<%= text_field_tag "comment" %><br />
+	<%= submit_tag "Post Comment" %>
+<% end %>

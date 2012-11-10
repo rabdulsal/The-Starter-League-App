@@ -1,19 +1,23 @@
-<html>
-
-<style>
-
-img {
-	padding: 10px;
-	border: 1px solid #aaa;
-	box-shadow: 1px 1px 5px #000;
-}
-</style>
-
 <h1>Here is the picture you requested</h1>
 
-<img src="<%= @pic_id.url %>" />
-<p>
-<%= link_to "Home", "/pictures" %>
-</p>
+	<img src="<%= @pic_id.url %>" />
+	<h3>
+		<%= link_to "Delete", "/pictures/#{@pic_id.id}", :method => "destroy", :confirm => "Are you sure you want to Delete this GIFstagram?" %>
+	</h3>
 
-</html>
+	<div class="comment-box">
+		<h2>Comment on this GIF</h2>	
+			<%= form_tag "/pictures/#{@pic_id.id}/comments", :method => "post" do %>
+				<%= label_tag "comment", "Leave a Comment" %><br />
+				<%= text_field_tag "comment" %><br />		
+				<%= submit_tag "Post Comment" %>
+		<% end %>
+
+		<h2>User Comments</h2>
+		
+		<% @comments.each do |note| %>
+			<li>
+				<%= note.comment %> | <%= link_to "Delete", "/comments/#{note.id}/", :method => "delete" %>
+			</li>		
+		<% end %>
+	</div>

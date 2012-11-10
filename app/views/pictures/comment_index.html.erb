@@ -1,0 +1,22 @@
+<h1>These are the latest Comments</h1>
+<table class="comment-index">
+	<% @comments.each do |note| %>
+		<tr>
+			<td>
+				<%= note.comment %>
+			</td> 
+			<td>
+				<%= note.picture_id %>
+			</td>
+			<td>
+				<img src="<%= note.picture.url %>" class="thumb-nail" />
+			</td> 
+			<td>
+				<%= link_to "View", "/pictures/#{note.picture_id}" %>
+			</td>
+			<td>
+				<%= link_to "Delete", "/comments/#{note.id}/", :method => "delete" %>
+			</td>
+		</tr>		
+	<% end %>
+</table>
