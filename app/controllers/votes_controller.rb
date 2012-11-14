@@ -24,7 +24,8 @@ class VotesController < ApplicationController
   # GET /votes/new
   # GET /votes/new.json
   def new
-    @vote = Vote.new
+    if session["user_id"].blank?
+      redirect_to "/pictures", :notice => "Sorry, you must be a member to do that."
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +41,9 @@ class VotesController < ApplicationController
   # POST /votes
   # POST /votes.json
   def create
-    @vote = Vote.new(params[:vote])
+    @vote = Vote.new
+    @vote.picture_id = params[:vote][:picture_id]
+    @vote.user_id = session["user_id"]
 
     respond_to do |format|
       if @vote.save

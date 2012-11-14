@@ -3,11 +3,15 @@ class PicturesController < ApplicationController
 # ----------------------------- PICTURES ---------------------------------
 
 	def index
-		@pictures = Picture.all
+		@pictures = Picture.all		
 	end
 
 	def new     
+		if session["user_id"].blank?
+			redirect_to(new_user_url, notice: "Sorry, you must be signed-in to do that.")
+		else
 		@pictures = Picture.new
+		end	
 	end
 
 	def edit
@@ -36,6 +40,7 @@ class PicturesController < ApplicationController
 	end
 
 	def show
+		@vote = Vote.new
 		@pic_id = Picture.find_by_id(params[:id])
 		@comments = Comment.where(:picture_id => params[:id])			
 	end
@@ -70,7 +75,16 @@ class PicturesController < ApplicationController
 # ----------------------------- VOTES ---------------------------------
 
 	def new_vote
+		@votes = Vote.new
+	end
 
+	def vote_create
+		p = Picture.find_by_id(params[:id])
+		v = Vote.new
+		v.vote = params["vote"]["vote"]
+		v.picture_id = p.id		
+		v.save
+		redirect_to "/pictures/#{p.id}"
 	end
 	
 end

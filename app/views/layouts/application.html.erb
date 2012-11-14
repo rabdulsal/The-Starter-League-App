@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myapp</title>
+  <title>GIFstagram</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -10,8 +10,21 @@
 <ul class="nav-bar">
 	<li><%= link_to "Home", "/pictures" %></li>
 	<li><%= link_to "Comments", "/comments" %></li>
-	<li><%= link_to "Add Pic", "/pictures/new" %></li>
+	<li><%= link_to "Users", users_url %></li>
+	<li><%= link_to "Add Pic", "/pictures/new" %></li>	
+	<% if session["user_id"].blank? %>
+		<li class="right">
+			<%= link_to "Sign-up", new_user_url %> |
+			<%= link_to "Sign-in", login_path %>
+		</li> 
+	<% else %>
+		<li class="right">
+			Hello <%= User.find(session["user_id"]).name %>
+			<%= link_to "Sign-out", logout_path %>
+		</li>
+	<% end %>
 </ul>
+
 
 <body>
 	<div class="container">

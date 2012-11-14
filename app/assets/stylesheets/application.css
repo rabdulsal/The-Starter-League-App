@@ -64,3 +64,9 @@ fieldset {
 .comment-index td:first-child {
 	text-align: right;
 }
+.float-left {
+	float: left;
+}
+.right {
+	float: right;
+}

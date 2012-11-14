@@ -20,4 +20,7 @@
 				<%= note.comment %> | <%= link_to "Delete", "/comments/#{note.id}/", :method => "delete" %>
 			</li>		
 		<% end %>
+		<h2>Vote on this GIF</h2>
+		<%= render 'vote_form' %>
+
 	</div>

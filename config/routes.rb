@@ -1,10 +1,19 @@
 Myapp::Application.routes.draw do
 
+  resources :users
+
   resources :votes
+
+  get "sessions/new" => 'sessions#new', :as => 'login'
+  post "sessions" => 'sessions#create'
+  get "logout" => 'sessions#destroy', :as => 'logout'
+
+   # ------------------- PICTURES ----------------------
 
   get "/pictures", :controller => 'Pictures', :action => 'index'  
   post "/pictures", :controller => 'Pictures', :action => 'create'
   get "/pictures/new", :controller => 'Pictures', :action => 'new'  
+  match "/new_picture" => "Pictures#new"
   get "/pictures/:id", :controller => 'Pictures', :action => 'show'
   delete "/pictures/:id", :controller => 'Pictures', :action => 'destroy'
   get "/pictures/:id/edit", :controller => 'Pictures', :action => 'edit', :as => 'picture'

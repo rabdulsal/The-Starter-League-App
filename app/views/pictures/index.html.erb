@@ -1,14 +1,20 @@
 <h1>Your Photo Index</h1>
-		
+	<h3 id="notice"><%= notice %></h3>
 		<ul>
 			<% @pictures.reverse.each do |image| %>
 				<li>
 					<img src="<%= image.url %>" class="index-pic" />
-					<p>
-						<%= link_to "View", "/pictures/#{image.id}" %>
-						<%= link_to "Edit", "/pictures/#{image.id}/edit" %>
-						<%= link_to "Delete", "/pictures/#{image.id}", :method => :delete, :confirm => "Are you sure you want to Delete this Image?" %>
-					</p>
 				</li>
-			<% end %>
+				<li>
+					<%= link_to "View", "/pictures/#{image.id}" %>
+					<%= link_to "Edit", "/pictures/#{image.id}/edit" %>
+					<%= link_to "Delete", "/pictures/#{image.id}", :method => :delete, :confirm => "Are you sure you want to Delete this Image?" %>
+				</li>
+				<li><% image.comments.each do |note| %>
+					<p>
+				 		<%= note.comment %>
+				 	</p>
+				 	<% end %>
+				 </li>
+					<% end %>						
 		</ul>		
