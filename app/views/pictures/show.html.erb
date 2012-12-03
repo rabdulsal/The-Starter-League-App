@@ -16,11 +16,9 @@
 		<h2>User Comments</h2>
 		
 		<% @comments.each do |note| %>
-			<li>
-				<%= note.comment %> | <%= link_to "Delete", "/comments/#{note.id}/", :method => "delete" %>
+			<li id="note_<%= note.id %>">
+				<%= note.comment %> | <%= link_to "Delete", "/comments/#{note.id}/", :method => "delete", remote: true %>
 			</li>		
 		<% end %>
-		<h2>Vote on this GIF</h2>
-		<%= render 'vote_form' %>
 
 	</div>

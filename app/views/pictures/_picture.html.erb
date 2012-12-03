@@ -1,0 +1,11 @@
+<li>
+	<img src="<%= image.url %>" class="index-pic" id="gif_<%= image.id %>" />
+	<%= link_to "View", "/pictures/#{image.id}" %>
+	<%= link_to "Edit", "/pictures/#{image.id}/edit" %>
+	<%= link_to "Delete", "/pictures/#{image.id}", :method => :delete, remote: true %>
+	<% image.comments.each do |note| %>
+		<p>
+	 		<%= note.comment %>
+	 	</p>
+	<% end %>
+</li>

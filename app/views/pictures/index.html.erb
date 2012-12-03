@@ -1,20 +1,38 @@
 <h1>Your Photo Index</h1>
-	<h3 id="notice"><%= notice %></h3>
+	
 		<ul>
+			<fieldset><b>Add New GIF</b>
+				<% if session[:user_id].blank? %>
+					<p><%= link_to "Please Log-in", login_url %></p>
+				<% else %>
+					<p>
+						<%= form_for Picture.new, remote: true do |f| %>
+						<%= f.text_field :url  %><br />
+						<%= f.submit "Submit pic", size: '20' %>
+						<% end %>
+					</p>
+				<% end %>
+			</fieldset>
+			<br>
 			<% @pictures.reverse.each do |image| %>
-				<li>
+				<li id="gif_<%= image.id %>">
 					<img src="<%= image.url %>" class="index-pic" />
-				</li>
-				<li>
 					<%= link_to "View", "/pictures/#{image.id}" %>
 					<%= link_to "Edit", "/pictures/#{image.id}/edit" %>
-					<%= link_to "Delete", "/pictures/#{image.id}", :method => :delete, :confirm => "Are you sure you want to Delete this Image?" %>
-				</li>
-				<li><% image.comments.each do |note| %>
-					<p>
-				 		<%= note.comment %>
-				 	</p>
+					<%= link_to "Delete", "/pictures/#{image.id}", :method => :delete, remote: true %>
+				<fieldset>
+					<%= form_tag "/pictures/#{image.id}/comments", :method => "post" do %>
+						<%= label_tag :comment, "Leave a Comment" %><br />
+						<%= text_field_tag :comment %><br />		
+						<%= submit_tag "Post!" %>
+					<% end %>
+					<br />
+					<% image.comments.each do |note| %>
+						<p id="note_<%= note.id %>">
+					 		<%= note.comment %> | <%= link_to "Delete", "/comments/#{note.id}", method: :delete, remote: true %>
+					 	</p>
 				 	<% end %>
-				 </li>
-					<% end %>						
+				</li>
+				</fieldset>
+			<% end %>						
 		</ul>		

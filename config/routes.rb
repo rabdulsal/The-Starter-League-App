@@ -1,5 +1,9 @@
 Myapp::Application.routes.draw do
 
+  get "comments/destroy"
+
+  root to: 'pictures#index'
+
   resources :users
 
   resources :votes
@@ -10,7 +14,7 @@ Myapp::Application.routes.draw do
 
    # ------------------- PICTURES ----------------------
 
-  get "/pictures", :controller => 'Pictures', :action => 'index'  
+  get "/pictures", :controller => 'Pictures', :action => 'index' 
   post "/pictures", :controller => 'Pictures', :action => 'create'
   get "/pictures/new", :controller => 'Pictures', :action => 'new'  
   match "/new_picture" => "Pictures#new"
@@ -18,7 +22,7 @@ Myapp::Application.routes.draw do
   delete "/pictures/:id", :controller => 'Pictures', :action => 'destroy'
   get "/pictures/:id/edit", :controller => 'Pictures', :action => 'edit', :as => 'picture'
   put "/pictures/:id/edit", :controller => 'Pictures', :action => 'update'
-  post "/pictures/:id/comments" => 'Pictures#comment_create'
+  post "/pictures/:id/comments" => 'Pictures#comment_create', as: 'new_comment'
   
   # ------------------ COMMENTS ----------------------
 

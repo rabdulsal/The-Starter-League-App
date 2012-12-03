@@ -3,15 +3,15 @@ class PicturesController < ApplicationController
 # ----------------------------- PICTURES ---------------------------------
 
 	def index
-		@pictures = Picture.all		
+		@pictures = Picture.all				
 	end
 
 	def new     
 		if session["user_id"].blank?
-			redirect_to(new_user_url, notice: "Sorry, you must be signed-in to do that.")
+			redirect_to(login_url, notice: "Sorry, you must be signed-in to do that.")
 		else
 		@pictures = Picture.new
-		end	
+		end			
 	end
 
 	def edit
@@ -19,10 +19,18 @@ class PicturesController < ApplicationController
 	end
 
 	def create
-		p = Picture.new
-		p.url = params["picture"]["url"]		
-		p.save
-		redirect_to "/pictures"
+		@p = Picture.new(params[:picture])
+		
+		respond_to do |format|
+			if @p.save
+				format.js { render 'create' }
+				format.html { redirect_to root_url, notice: 'Your Picture was successfully uploaded.' }
+	        	format.json { render json: @p, status: :created, location: @p }
+	        else
+	        	format.html { render action 'new' }
+	        	format.json { render json: @p, status: :created, location: @p }
+	        end
+		end
 	end
 
 	def update
@@ -34,9 +42,14 @@ class PicturesController < ApplicationController
 	end	
 
 	def destroy
-		p = Picture.find_by_id(params[:id])
-		p.destroy
-		redirect_to "/pictures"
+		@p = Picture.find_by_id(params[:id])
+		@p.destroy
+		
+		respond_to do |format|
+			format.js { render 'destroy' }
+			format.html { redirect_to root_url }
+			format.json { head :no_content }
+		end
 	end
 
 	def show
@@ -48,14 +61,34 @@ class PicturesController < ApplicationController
 # ----------------------------- COMMENTS ---------------------------------
 
 	def comment_create
+		@p = Picture.find_by_id(params[:id])
+		@c = Comment.new
+		@c.comment = params[:comment]
+		@c.picture_id = @p.id
+		
+		respond_to do |format|
+			if @c.save
+				format.js { render 'create_comment' }
+				format.html { redirect_to root_url, notice: 'Your Comment was created.' }
+	        	format.json { render json: @p, status: :created, location: @p }
+	        else
+	        	format.html { render action 'new' }
+	        	format.json { render json: @p, status: :created, location: @p }
+	        end
+		end
+	end
+
+	def comment_edit
+	    @pictures = Picture.find_by_id(params[:id])
+	end
+
+	def comment_update
 		p = Picture.find_by_id(params[:id])
-		c = Comment.new
-		c.comment = params[:comment]
-		c.picture_id = p.id
-		c.save
+		p.url = params["picture"]["url"]
+		p.save
 
 		redirect_to "/pictures/#{p.id}"
-	end
+	end	
 
 	def comment_index
 		@comments = Comment.all.reverse	 
@@ -69,7 +102,10 @@ class PicturesController < ApplicationController
 		@c = Comment.find_by_id(params[:id])
 		@c.destroy
 
-		redirect_to "/comments"
+		respond_to do |format|
+			format.js { render 'destroy_comment' }
+			format.html { redirect_to root_url }
+		end
 	end
 
 # ----------------------------- VOTES ---------------------------------
